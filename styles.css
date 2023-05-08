@@ -1,0 +1,74 @@
+body{
+    background-color: beige;
+}
+
+
+.flex-container {
+    border: 1px solid black;
+    background-color: #ccc;
+    padding: 20px;
+    /* Con esto se habilita el flexbox */
+    display: flex;
+    /* Direccion del container si es a modo fila o columna o en fila reversa o columna reversa */
+    /* flex-direction:row; */
+    /* Para que se acomeden en varias filas con wrap o nowrap */
+    /* flex-wrap: wrap; */
+    /* FLEX-FLOW combina las propiedades de dirección y de wrap en una sola línea, sustituyendo las 2 líneas anteriores*/
+    flex-flow: row wrap;
+    /* Separar los elementos con un espacio igual entre cada uno de ellos */
+    justify-content: center;
+    /* justify-content: flex-start - Para que los elementos se ubiquen al principio del contenedor */
+    /* justify-content: flex-end - Para que los elementos se ubiquen al final del contenedor */
+    
+    /* align-items: center, flex-start, flex-end Para que los elementos se alineen al centro o al principio o al final del cotenedor */
+    /* align-items: strech expande los elementos al 100% del tamaño del contenedor */
+    align-items: center;
+    /* align-content: center; flex-start, flex-end*/
+    /* align-content: flex-end; */
+    align-content: center;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.caja  {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 120px;
+    /* height: 120px; */
+    /* centrado vertical */
+    line-height: 120px;
+    text-align: center;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.c1{
+    background-color: lightblue;
+    /* Ordenar la posición de la caja como uno quiera con order */
+    order: 3;
+
+    /* Con flex-grow le asignamos un ancho de forma prioritario sin importar el width  */
+    flex-grow: 5;
+    
+    /* Esto se usa en vez del width para asignar anchos dentro de FLEXBOX */
+    flex-basis: 50%;
+}
+
+.c2{
+    background-color: lightcoral;
+    /* Ordenar la posición de la caja como uno quiera con order */
+    order: 1;
+
+    /* Con flex-grow le asignamos un ancho de forma prioritario sin importar el width  */
+    flex-grow: 3;
+}
+
+.c3{
+    background-color: lightgreen;
+    /* Ordenar la posición de la caja como uno quiera con order */
+    order: 2;
+}
